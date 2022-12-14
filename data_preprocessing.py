@@ -6,20 +6,20 @@ import shutil
 import re
 import random
 
-# try:
-#     print("*")
-#     shutil.rmtree("./tmp")
-# except:
-#     pass
-# os.mkdir("./tmp")
-# try:
-#     print("**")
-#     shutil.rmtree("./kfashion")
-# except:
-#     pass
-# os.mkdir("./kfashion")
-# os.mkdir("./kfashion/train")
-# os.mkdir("./kfashion/val")
+try:
+    print("*")
+    shutil.rmtree("./tmp")
+except:
+    pass
+os.mkdir("./tmp")
+try:
+    print("**")
+    shutil.rmtree("./kfashion")
+except:
+    pass
+os.mkdir("./kfashion")
+os.mkdir("./kfashion/train")
+os.mkdir("./kfashion/val")
 def split_train_and_val():
     train_annotations, val_annotations=[], []
     train_images, val_images=[], []
@@ -96,11 +96,12 @@ def split_train_and_val():
             else:
                 shutil.move("./tmp/"+dir+"/images/"+img_f, f"./kfashion/val/{file_name}.jpg")                
               
-# split_train_and_val()
+split_train_and_val()
 
-# try:
-#     shutil.rmtree("./tmp")
-# except:
-#     pass
+try:
+    shutil.rmtree("./tmp")
+except:
+    pass
+
 
 
